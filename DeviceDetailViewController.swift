@@ -32,15 +32,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     @IBOutlet var allCells: [UITableViewCell]!
     
     @IBOutlet var infoAndStateCells: [UITableViewCell]!
-/*    @IBOutlet weak var mfgNameLabel: UILabel!
-    @IBOutlet weak var serialNumLabel: UILabel!
-    @IBOutlet weak var hwRevLabel: UILabel!
-    @IBOutlet weak var fwRevLabel: UILabel!
-    @IBOutlet weak var modelNumberLabel: UILabel!
-    @IBOutlet weak var batteryLevelLabel: UILabel!
-    @IBOutlet weak var rssiLevelLabel: UILabel!
-    @IBOutlet weak var txPowerSelector: UISegmentedControl!
-*/    @IBOutlet weak var firmwareUpdateLabel: UILabel!
+@IBOutlet weak var firmwareUpdateLabel: UILabel!
     
 /*    @IBOutlet weak var mechanicalSwitchCell: UITableViewCell!
     @IBOutlet weak var mechanicalSwitchLabel: UILabel!
