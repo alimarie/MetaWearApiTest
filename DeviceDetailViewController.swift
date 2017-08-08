@@ -30,64 +30,14 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     @IBOutlet weak var setNameButton: UIButton!
     
     @IBOutlet var allCells: [UITableViewCell]!
-    
     @IBOutlet var infoAndStateCells: [UITableViewCell]!
-@IBOutlet weak var firmwareUpdateLabel: UILabel!
-    
-/*    @IBOutlet weak var mechanicalSwitchCell: UITableViewCell!
-    @IBOutlet weak var mechanicalSwitchLabel: UILabel!
-    @IBOutlet weak var startSwitch: UIButton!
-    @IBOutlet weak var stopSwitch: UIButton!
-*/
+    @IBOutlet weak var firmwareUpdateLabel: UILabel!
+
     @IBOutlet weak var ledCell: UITableViewCell!
-    
-  /*  @IBOutlet weak var tempCell: UITableViewCell!
-    @IBOutlet weak var tempChannelSelector: UISegmentedControl!
-    @IBOutlet weak var channelTypeLabel: UILabel!
-    @IBOutlet weak var tempratureLabel: UILabel!
-    @IBOutlet weak var readPinLabel: UILabel!
-    @IBOutlet weak var readPinTextField: UITextField!
-    @IBOutlet weak var enablePinLabel: UILabel!
-    @IBOutlet weak var enablePinTextField: UITextField!
-*/  var temperatureEvent: MBLEvent<MBLNumericData>!
+    var temperatureEvent: MBLEvent<MBLNumericData>!
  
  
-    @IBOutlet weak var tapDetectionType: UISegmentedControl!
-
-    @IBOutlet weak var accelerometerBMI160Cell: UITableViewCell!
-    @IBOutlet weak var accelerometerBMI160Scale: UISegmentedControl!
-    @IBOutlet weak var accelerometerBMI160Frequency: UISegmentedControl!
-    @IBOutlet weak var accelerometerBMI160StartStream: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopStream: UIButton!
-    @IBOutlet weak var accelerometerBMI160StartLog: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopLog: UIButton!
-    @IBOutlet weak var accelerometerBMI160Graph: APLGraphView!
-    @IBOutlet weak var accelerometerBMI160TapType: UISegmentedControl!
-    @IBOutlet weak var accelerometerBMI160StartTap: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopTap: UIButton!
-    @IBOutlet weak var accelerometerBMI160TapLabel: UILabel!
-    var accelerometerBMI160TapCount = 0
-    @IBOutlet weak var accelerometerBMI160StartFlat: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopFlat: UIButton!
-    @IBOutlet weak var accelerometerBMI160FlatLabel: UILabel!
-    @IBOutlet weak var accelerometerBMI160StartOrient: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopOrient: UIButton!
-    @IBOutlet weak var accelerometerBMI160OrientLabel: UILabel!
-    @IBOutlet weak var accelerometerBMI160StartStep: UIButton!
-    @IBOutlet weak var accelerometerBMI160StopStep: UIButton!
-    @IBOutlet weak var accelerometerBMI160StepLabel: UILabel!
-    var accelerometerBMI160StepCount = 0
     var accelerometerBMI160Data = [MBLAccelerometerData]()
-    
-
-/*    @IBOutlet weak var gyroBMI160Cell: UITableViewCell!
-    @IBOutlet weak var gyroBMI160Scale: UISegmentedControl!
-    @IBOutlet weak var gyroBMI160Frequency: UISegmentedControl!
-    @IBOutlet weak var gyroBMI160StartStream: UIButton!
-    @IBOutlet weak var gyroBMI160StopStream: UIButton!
-    @IBOutlet weak var gyroBMI160StartLog: UIButton!
-    @IBOutlet weak var gyroBMI160StopLog: UIButton!
-*/
 
     @IBOutlet weak var gpioCell: UITableViewCell!
     @IBOutlet weak var gpioPinSelector: UISegmentedControl!
@@ -264,25 +214,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         } else {
             print("ID: \(device.identifier.uuidString)")
         }
-        // We always have the info and state features
-       /* cells(self.infoAndStateCells, setHidden: false)
-        mfgNameLabel.text = device.deviceInfo?.manufacturerName ?? "N/A"
-        serialNumLabel.text = device.deviceInfo?.serialNumber ?? "N/A"
-        hwRevLabel.text = device.deviceInfo?.hardwareRevision ?? "N/A"
-        fwRevLabel.text = device.deviceInfo?.firmwareRevision ?? "N/A"
-        modelNumberLabel.text = "\(device.deviceInfo?.modelNumber ?? "N/A") (\(MBLModelString(device.model)))"
-        txPowerSelector.selectedSegmentIndex = Int(device.settings!.transmitPower.rawValue)
-        // Automaticaly send off some reads
-        device.readBatteryLifeAsync().success { result in
-            self.batteryLevelLabel.text = result.stringValue
-        }
-        device.readRSSIAsync().success { result in
-            self.rssiLevelLabel.text = result.stringValue
-        }
-        device.checkForFirmwareUpdateAsync().success { result in
-            self.firmwareUpdateLabel.text = result.boolValue ? "AVAILABLE!" : "Up To Date"
-        }
-        */
+        
         if device.led != nil {
             cell(ledCell, setHidden: false)
         }
@@ -297,83 +229,6 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
             reloadData(animated: true)
             return
         }
-        
-        // Go through each module and enable the correct cell for the modules on this particular MetaWear
-  /*      if device.mechanicalSwitch != nil {
-            cell(mechanicalSwitchCell, setHidden: false)
-        }
-   */
-/*      if device.temperature != nil {
-            cell(tempCell, setHidden: false)
-            // The number of channels is variable
-            tempChannelSelector.removeAllSegments()
-            for i in 0..<device.temperature!.channels.count {
-                tempChannelSelector.insertSegment(withTitle: "\(i)", at: i, animated: false)
-            }
-            tempChannelSelector.selectedSegmentIndex = 0
-            tempChannelSelectorPressed(tempChannelSelector)
-        }
-*/
-   /*     if (device.accelerometer is MBLAccelerometerBMI160) {
-            cell(accelerometerBMI160Cell, setHidden: false)
-            if device.accelerometer!.dataReadyEvent.isLogging() {
-                accelerometerBMI160StartLog.isEnabled = false
-                accelerometerBMI160StopLog.isEnabled = true
-                accelerometerBMI160StartStream.isEnabled = false
-                accelerometerBMI160StopStream.isEnabled = false
-            } else {
-                accelerometerBMI160StartLog.isEnabled = true
-                accelerometerBMI160StopLog.isEnabled = false
-                accelerometerBMI160StartStream.isEnabled = true
-                accelerometerBMI160StopStream.isEnabled = false
-            }
-        }
-    */
-   /*     if device.gyro is MBLGyroBMI160 {
-            cell(gyroBMI160Cell, setHidden: false)
-            if device.gyro!.dataReadyEvent.isLogging() {
-                gyroBMI160StartLog.isEnabled = false
-                gyroBMI160StopLog.isEnabled = true
-                gyroBMI160StartStream.isEnabled = false
-                gyroBMI160StopStream.isEnabled = false
-           }
-            else {
-                gyroBMI160StartLog.isEnabled = true
-                gyroBMI160StopLog.isEnabled = false
-                gyroBMI160StartStream.isEnabled = true
-                gyroBMI160StopStream.isEnabled = false
-            }
-        }
-    */
-     /*   if device.gpio != nil {
-            if device.gpio!.pins.count > 0 {
-                cell(gpioCell, setHidden: false)
-                // The number of pins is variable
-                gpioPinSelector.removeAllSegments()
-                for i in 0..<device.gpio!.pins.count {
-                    gpioPinSelector.insertSegment(withTitle: "\(i)", at: i, animated: false)
-                }
-                gpioPinSelector.selectedSegmentIndex = 0
-            }
-        }
-  */
-   /*     if device.barometer is MBLBarometerBME280 {
-            cell(barometerBME280Cell, setHidden: false)
-        }
-        
-        if device.ambientLight is MBLAmbientLightLTR329 {
-            cell(ambientLightLTR329Cell, setHidden: false)
-        }
-        
-        if device.hygrometer is MBLHygrometerBME280 {
-            cell(hygrometerBME280Cell, setHidden: false)
-        }
-        
-        if device.serial != nil {
-            cell(i2cCell, setHidden: false)
-        }
-        
-*/
         
         // Make the magic happen!
         reloadData(animated: true)
@@ -457,26 +312,6 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         return true
     }
     
-/*    @IBAction func readBatteryPressed(_ sender: Any) {
-        device.readBatteryLifeAsync().success { result in
-            self.batteryLevelLabel.text = result.stringValue
-        }.failure { error in
-            self.showAlertTitle("Error", message: error.localizedDescription)
-        }
-    }
-*/
-/*    @IBAction func readRSSIPressed(_ sender: Any) {
-        device.readRSSIAsync().success { result in
-            self.rssiLevelLabel.text = result.stringValue
-        }.failure { error in
-            self.showAlertTitle("Error", message: error.localizedDescription)
-        }
-    }
-*/
-/*    @IBAction func txPowerChanged(_ sender: Any) {
-        device.settings?.transmitPower = MBLTransmitPower(rawValue: UInt8(txPowerSelector.selectedSegmentIndex))!
-    }
-*/
     @IBAction func checkForFirmwareUpdatesPressed(_ sender: Any) {
         device.checkForFirmwareUpdateAsync().success { result in
             self.firmwareUpdateLabel.text = result.boolValue ? "AVAILABLE!" : "Up To Date"
@@ -529,30 +364,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         device.setConfigurationAsync(nil)
     }
     
-/*    @IBAction func readSwitchPressed(_ sender: Any) {
-        device.mechanicalSwitch?.switchValue.readAsync().success { result in
-            self.mechanicalSwitchLabel.text = result.value.boolValue ? "Down" : "Up"
-        }
-    }
-*/
-/*    @IBAction func startSwitchNotifyPressed(_ sender: Any) {
-        startSwitch.isEnabled = false
-        stopSwitch.isEnabled = true
-        streamingEvents.insert(device.mechanicalSwitch!.switchUpdateEvent)
-        device.mechanicalSwitch!.switchUpdateEvent.startNotificationsAsync { (obj, error) in
-            if let obj = obj {
-                self.mechanicalSwitchLabel.text = obj.value.boolValue ? "Down" : "Up"
-            }
-        }
-    }
-*/
-/*    @IBAction func stopSwitchNotifyPressed(_ sender: Any) {
-        startSwitch.isEnabled = true
-        stopSwitch.isEnabled = false
-        streamingEvents.remove(device.mechanicalSwitch!.switchUpdateEvent)
-        device.mechanicalSwitch!.switchUpdateEvent.stopNotificationsAsync()
-    }
-*/
+
     // *************  Data Transfer  *************
     
     func send(_ data: Data, title: String) {
@@ -637,6 +449,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         
         accelerometerBMI160.fullScaleRange = .range2G
         self.accelerometerGraphView.fullScale = 2
+        accelerometerBMI160.sampleFrequency = 50
         
      /*   switch self.accelerometerBMI160Scale.selectedSegmentIndex {
         case 0:
@@ -656,8 +469,8 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         }
      */
         
-        accelerometerBMI160.sampleFrequency = Double(self.accelerometerBMI160Frequency.titleForSegment(at: self.accelerometerBMI160Frequency.selectedSegmentIndex)!)!
-        accelerometerBMI160.tapEvent.type = MBLAccelerometerTapType(rawValue: UInt8(tapDetectionType.selectedSegmentIndex))!
+        //accelerometerBMI160.sampleFrequency = Double(self.accelerometerBMI160Frequency.titleForSegment(at: self.accelerometerBMI160Frequency.selectedSegmentIndex)!)!
+        //accelerometerBMI160.tapEvent.type = MBLAccelerometerTapType(rawValue: UInt8(tapDetectionType.selectedSegmentIndex))!      // 08.08.17
     }
     
 /*    @IBAction func accelerometerBMI160StartStreamPressed(_ sender: Any) {
