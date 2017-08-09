@@ -213,7 +213,7 @@
                             <tableViewSection headerTitle="Ambient Environment" id="YOy-sf-gzE" userLabel="Ambient">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="990" id="CqG-hx-qLp">
-                                        <rect key="frame" x="0.0" y="146.5" width="320" height="990"/>
+                                        <rect key="frame" x="0.0" y="147" width="320" height="990"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CqG-hx-qLp" id="1FD-JF-qdQ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="989"/>
@@ -250,13 +250,13 @@
                                                             <rect key="frame" x="0.0" y="66" width="320" height="197"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_crying" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-kK-Yds">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="197"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_normal" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-S1-UU3">
-                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="197"/>
+                                                                    <rect key="frame" x="107" y="0.0" width="107" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_sleeping" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-ta-ZTQ">
-                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="197"/>
+                                                                    <rect key="frame" x="214" y="0.0" width="106" height="197"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -273,16 +273,16 @@
                                                             <rect key="frame" x="0.0" y="263" width="320" height="220"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-6a-S9x" userLabel="Temperature Stack View">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="220"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temperature" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-Zi-9OH" userLabel="Thermometer">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="zIV-CC-ejF"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-Lf-Qk3">
-                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="107" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -293,7 +293,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-wY-Bfs" userLabel="Light Stack View">
-                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="220"/>
+                                                                    <rect key="frame" x="107" y="0.0" width="107" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Light" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-RW-RbL" userLabel="Lightbulb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
@@ -313,16 +313,16 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8SJ-fI-gUx" userLabel="Humidity Stack View">
-                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="220"/>
+                                                                    <rect key="frame" x="214" y="0.0" width="106" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humidity" translatesAutoresizingMaskIntoConstraints="NO" id="grA-WR-Tnc" userLabel="Raindrop">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="YB3-Mi-rX6"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIG-bm-Z44">
-                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="106" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -439,7 +439,7 @@
                             <tableViewSection headerTitle="Info and State" id="Bgw-yR-3ah">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="342" id="wwc-Du-3aE">
-                                        <rect key="frame" x="0.0" y="1175.5" width="320" height="342"/>
+                                        <rect key="frame" x="0.0" y="1177" width="320" height="342"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwc-Du-3aE" id="Njm-6X-FLp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="341"/>
@@ -473,7 +473,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="Bd1-3g-g07">
-                                        <rect key="frame" x="0.0" y="1517.5" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="1519" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bd1-3g-g07" id="1XH-y6-wnG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
@@ -509,7 +509,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="Trh-Ug-Nij">
-                                        <rect key="frame" x="0.0" y="1626.5" width="320" height="113"/>
+                                        <rect key="frame" x="0.0" y="1628" width="320" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Trh-Ug-Nij" id="e7C-jd-pb9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
@@ -543,7 +543,7 @@
                             <tableViewSection headerTitle="LED" id="Km7-7G-J5I">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="Nhr-ih-E25">
-                                        <rect key="frame" x="0.0" y="1778.5" width="320" height="169"/>
+                                        <rect key="frame" x="0.0" y="1781" width="320" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nhr-ih-E25" id="3ur-B8-wZt">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
@@ -584,112 +584,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Barometer BME280" id="0Ww-tE-HRx">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="278" id="Odj-7N-3bc">
-                                        <rect key="frame" x="0.0" y="1986.5" width="320" height="278"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odj-7N-3bc" id="Q4M-N4-RTW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-cf-0er">
-                                                    <rect key="frame" x="14" y="27" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="Ultra Low"/>
-                                                        <segment title="Low"/>
-                                                        <segment title="Default"/>
-                                                        <segment title="High"/>
-                                                        <segment title="Ultra High"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oversampling:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmZ-1Q-e7K">
-                                                    <rect key="frame" x="14" y="8" width="94" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Averaging:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-JN-2wo">
-                                                    <rect key="frame" x="14" y="68" width="69" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="gH8-2y-XJy">
-                                                    <rect key="frame" x="14" y="87" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="Off"/>
-                                                        <segment title="2X"/>
-                                                        <segment title="4X"/>
-                                                        <segment title="8X"/>
-                                                        <segment title="16X"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-wk-Y9H">
-                                                    <rect key="frame" x="14" y="197" width="108" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Start Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="barometerBME280StartStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="p55-IL-XlI"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RS-zu-h0y">
-                                                    <rect key="frame" x="199" y="197" width="107" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Stop Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="barometerBME280StopStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="oGY-t9-1Yp"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standby Time (ms):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21H-fI-QiF">
-                                                    <rect key="frame" x="14" y="128" width="126" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-Oq-kWO">
-                                                    <rect key="frame" x="14" y="148" width="298" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="0.5"/>
-                                                        <segment title="10"/>
-                                                        <segment title="20"/>
-                                                        <segment title="62.5"/>
-                                                        <segment title="125"/>
-                                                        <segment title="250" width="40.857142857142854"/>
-                                                        <segment title="500"/>
-                                                        <segment title="1000"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altitude (m)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8q-3G-9uI">
-                                                    <rect key="frame" x="14" y="235" width="90" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X.XXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZx-1k-He7">
-                                                    <rect key="frame" x="199" y="235" width="107" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Ambient Light LTR329" id="k2T-az-d2v">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="285" id="dqJ-xr-btu">
-                                        <rect key="frame" x="0.0" y="2303.5" width="320" height="285"/>
+                                        <rect key="frame" x="0.0" y="1990" width="320" height="285"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dqJ-xr-btu" id="p8h-Zx-HB6">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
@@ -790,159 +688,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Hygrometer BME280" id="iN1-yS-2b0">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="159" id="sUT-nh-l7m">
-                                        <rect key="frame" x="0.0" y="2627.5" width="320" height="159"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUT-nh-l7m" id="Mkt-Pe-hHc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oversampling:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqT-7V-qcj">
-                                                    <rect key="frame" x="14" y="8" width="93" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yUx-wM-Dfy">
-                                                    <rect key="frame" x="14" y="27" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="1X"/>
-                                                        <segment title="2X"/>
-                                                        <segment title="4X"/>
-                                                        <segment title="8X"/>
-                                                        <segment title="16X"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHv-TG-0ng">
-                                                    <rect key="frame" x="14" y="75" width="108" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Start Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="hygrometerBME280StartStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="K9E-0O-NOE"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNi-jk-cqa">
-                                                    <rect key="frame" x="199" y="75" width="107" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Stop Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="hygrometerBME280StopStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="0A8-Pr-23Q"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX.XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-vq-Hlq">
-                                                    <rect key="frame" x="199" y="113" width="107" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Humidity (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bH-UT-5ff">
-                                                    <rect key="frame" x="14" y="113" width="98" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="I2C" id="JAS-bf-17C">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="252" id="ylv-JV-I3f">
-                                        <rect key="frame" x="0.0" y="2825.5" width="320" height="252"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ylv-JV-I3f" id="lZX-8x-eQC">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJC-6P-ydo">
-                                                    <rect key="frame" x="14" y="8" width="32" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wSO-pI-cI9">
-                                                    <rect key="frame" x="14" y="27" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="Byte"/>
-                                                        <segment title="Word"/>
-                                                        <segment title="Dword"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-kC-rwb">
-                                                    <rect key="frame" x="14" y="157" width="78" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Read Bytes">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="i2cReadBytesPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="wSC-Nz-w2J"/>
-                                                    </connections>
-                                                </button>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0x12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whG-hv-eGn">
-                                                    <rect key="frame" x="177" y="70" width="129" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
-                                                </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0x34" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-Aw-vjg">
-                                                    <rect key="frame" x="177" y="108" width="129" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9S-oH-XUf">
-                                                    <rect key="frame" x="14" y="74" width="124" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRb-as-izP">
-                                                    <rect key="frame" x="14" y="113" width="135" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0xXXXXXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzs-Vj-l5q">
-                                                    <rect key="frame" x="178" y="161" width="128" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0xDEADBEEF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-eo-RHj">
-                                                    <rect key="frame" x="177" y="196" width="129" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
-                                                </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox8-hh-rCF">
-                                                    <rect key="frame" x="14" y="195" width="79" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Write Bytes">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="i2cWriteBytesPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="80g-RK-9hF"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="and-78-Gqu" id="bbU-lc-BcB"/>
@@ -964,29 +709,11 @@
                         <outlet property="ambientLightLTR329Measurement" destination="4hR-fN-9ef" id="MUR-0o-p6f"/>
                         <outlet property="ambientLightLTR329StartStream" destination="DdB-VN-dbG" id="PTW-7z-2Af"/>
                         <outlet property="ambientLightLTR329StopStream" destination="yIq-Y5-tdj" id="1kZ-fB-1RM"/>
-                        <outlet property="barometerBME280Altitude" destination="sZx-1k-He7" id="y5U-Mw-I63"/>
-                        <outlet property="barometerBME280Averaging" destination="gH8-2y-XJy" id="x2j-qY-fD7"/>
-                        <outlet property="barometerBME280Cell" destination="Odj-7N-3bc" id="ZaK-lp-lfm"/>
-                        <outlet property="barometerBME280Oversampling" destination="Ah0-cf-0er" id="nMz-qP-39a"/>
-                        <outlet property="barometerBME280Standby" destination="Gee-Oq-kWO" id="ffS-GN-hho"/>
-                        <outlet property="barometerBME280StartStream" destination="mHl-wk-Y9H" id="Wfm-eJ-orN"/>
-                        <outlet property="barometerBME280StopStream" destination="8RS-zu-h0y" id="ajS-eS-kJc"/>
                         <outlet property="connectionStateLabel" destination="CLU-aI-rU0" id="s61-NF-ulO"/>
                         <outlet property="connectionSwitch" destination="4qP-3s-tgB" id="LRu-bF-eO5"/>
                         <outlet property="firmwareUpdateLabel" destination="0WJ-XI-TGM" id="FGd-tL-q5o"/>
                         <outlet property="gyroBMI160Graph" destination="fup-Wq-fJx" id="PNg-mY-c7c"/>
                         <outlet property="humidityMeasurement" destination="dIG-bm-Z44" id="lFt-Rg-5hu"/>
-                        <outlet property="hygrometerBME280Cell" destination="sUT-nh-l7m" id="p0v-Dy-r0z"/>
-                        <outlet property="hygrometerBME280Humidity" destination="JWm-vq-Hlq" id="BTi-3g-PT1"/>
-                        <outlet property="hygrometerBME280Oversample" destination="yUx-wM-Dfy" id="8OK-0E-7dc"/>
-                        <outlet property="hygrometerBME280StartStream" destination="rHv-TG-0ng" id="9J4-mj-xfc"/>
-                        <outlet property="hygrometerBME280StopStream" destination="yNi-jk-cqa" id="fId-B9-bvA"/>
-                        <outlet property="i2cCell" destination="ylv-JV-I3f" id="w2p-eh-DHM"/>
-                        <outlet property="i2cDeviceAddress" destination="whG-hv-eGn" id="K5P-bh-B3o"/>
-                        <outlet property="i2cReadByteLabel" destination="kzs-Vj-l5q" id="fM6-UM-UiY"/>
-                        <outlet property="i2cRegisterAddress" destination="CBO-Aw-vjg" id="mI9-N1-V3u"/>
-                        <outlet property="i2cSizeSelector" destination="wSO-pI-cI9" id="gdo-wR-iMj"/>
-                        <outlet property="i2cWriteByteField" destination="wR4-eo-RHj" id="vUa-yN-tRS"/>
                         <outlet property="ledCell" destination="Nhr-ih-E25" id="hFa-he-xO8"/>
                         <outlet property="lightGraphView" destination="p6u-j2-cfB" id="YoT-WB-2kP"/>
                         <outlet property="lightMeasurement" destination="MuI-4W-01i" id="qrZ-hb-utT"/>
@@ -1003,9 +730,6 @@
                         <outletCollection property="allCells" destination="Bd1-3g-g07" collectionClass="NSMutableArray" id="dte-vb-m5c"/>
                         <outletCollection property="infoAndStateCells" destination="Bd1-3g-g07" collectionClass="NSMutableArray" id="3XM-pM-Xp5"/>
                         <outletCollection property="allCells" destination="dqJ-xr-btu" collectionClass="NSMutableArray" id="fw2-Ej-ne5"/>
-                        <outletCollection property="allCells" destination="Odj-7N-3bc" collectionClass="NSMutableArray" id="gjV-eo-KKd"/>
-                        <outletCollection property="allCells" destination="sUT-nh-l7m" collectionClass="NSMutableArray" id="MLK-mw-mBG"/>
-                        <outletCollection property="allCells" destination="ylv-JV-I3f" collectionClass="NSMutableArray" id="95I-I8-7t9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq9-CB-brG" userLabel="First Responder" sceneMemberID="firstResponder"/>

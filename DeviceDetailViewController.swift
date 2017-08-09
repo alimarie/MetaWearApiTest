@@ -1105,9 +1105,8 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         }
 
         // -----  HUMIDITY -----
-        hygrometerBME280Oversample.isEnabled = false
         let hygrometerBME280 = device.hygrometer as! MBLHygrometerBME280
-            hygrometerBME280.humidityOversampling = .oversample16X
+            hygrometerBME280.humidityOversampling = .oversample1X
         
         hygrometerBME280Event = device.hygrometer!.humidity!.periodicRead(withPeriod: 700)
         streamingEvents.insert(hygrometerBME280Event)
@@ -1179,7 +1178,6 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         
         
         // ----- humidity -----
-        hygrometerBME280Oversample.isEnabled = true
         streamingEvents.remove(hygrometerBME280Event)
         hygrometerBME280Event.stopNotificationsAsync()
         
