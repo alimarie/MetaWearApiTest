@@ -53,6 +53,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     @IBOutlet weak var gyroBMI160Graph: APLGraphView!
     var accelerometerBMI160Data = [MBLAccelerometerData]()
     var gyroBMI160Data = [MBLGyroData]()
+    var lightData = [Double]()
     
     // Events
     var hygrometerBME280Event: MBLEvent<MBLNumericData>!
@@ -444,7 +445,8 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         ambientLightLTR329.integrationTime = .integration100ms
         ambientLightLTR329.measurementRate = .rate1000ms
         // create data storage array
-      //  array2 = []
+        var array2 = [Double]()
+        lightData = array2
         
         // add to streaming events
         streamingEvents.insert(ambientLightLTR329.periodicIlluminance)
@@ -453,9 +455,9 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
                 self.lightMeasurement.text = String(format: "%.0f lux", obj.value.doubleValue)
             }
             if let obj = obj {
-                self.lightGraphView.addX(obj.value.doubleValue, y: 1, z: 1)
+                self.lightGraphView.addX(obj.value.doubleValue, y: obj.value.doubleValue, z: obj.value.doubleValue)
             }
-      //      array2.append((obj?.value.doubleValue)!)
+            array2.append((obj?.value.doubleValue)!)
         }
         
        
