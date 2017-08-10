@@ -222,15 +222,15 @@
                         <sections>
                             <tableViewSection headerTitle="Ambient Environment" id="YOy-sf-gzE" userLabel="Ambient">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="990" id="CqG-hx-qLp">
-                                        <rect key="frame" x="0.0" y="147" width="320" height="990"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1200" id="CqG-hx-qLp">
+                                        <rect key="frame" x="0.0" y="147" width="320" height="1200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CqG-hx-qLp" id="1FD-JF-qdQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="989"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="1199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OdC-uI-3L3" userLabel="Felicity Stack View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="993"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1143"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Hw-W88" userLabel="Start Monitoring Button">
                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="33"/>
@@ -401,38 +401,38 @@
                                                                 <constraint firstAttribute="width" constant="320" id="EBU-RA-ytp"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-j2-cfB" customClass="APLGraphView">
-                                                            <rect key="frame" x="0.0" y="693" width="320" height="150"/>
-                                                            <color key="backgroundColor" red="0.60267040019999996" green="0.85961777510000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="320" id="2kO-4I-d0t"/>
-                                                                <constraint firstAttribute="height" constant="150" id="euv-3z-N8n"/>
-                                                            </constraints>
-                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fup-Wq-fJx" customClass="APLGraphView">
-                                                            <rect key="frame" x="0.0" y="843" width="320" height="150"/>
+                                                            <rect key="frame" x="0.0" y="693" width="320" height="150"/>
                                                             <color key="backgroundColor" red="0.60267040019999996" green="0.85961777510000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="150" id="fvs-E0-Pdc"/>
                                                                 <constraint firstAttribute="width" constant="320" id="wXW-HZ-V07"/>
                                                             </constraints>
                                                         </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-j2-cfB" customClass="APLGraphView">
+                                                            <rect key="frame" x="0.0" y="843" width="320" height="150"/>
+                                                            <color key="backgroundColor" red="0.60267040019999996" green="0.85961777510000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="320" id="2kO-4I-d0t"/>
+                                                                <constraint firstAttribute="height" constant="150" id="euv-3z-N8n"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7C-0f-xTX" customClass="APLGraphView">
+                                                            <rect key="frame" x="0.0" y="993" width="320" height="150"/>
+                                                            <color key="backgroundColor" red="0.60267040019999996" green="0.85961777510000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="OF1-df-Oyh"/>
+                                                                <constraint firstAttribute="width" constant="320" id="aqv-lU-jR1"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="fup-Wq-fJx" firstAttribute="top" secondItem="p6u-j2-cfB" secondAttribute="bottom" id="1kj-eA-Gyf"/>
-                                                        <constraint firstAttribute="bottom" secondItem="fup-Wq-fJx" secondAttribute="bottom" id="38J-WB-1oQ"/>
                                                         <constraint firstItem="PJF-I1-cfV" firstAttribute="top" secondItem="aRu-XB-bHH" secondAttribute="bottom" id="9GF-qA-Quh"/>
                                                         <constraint firstItem="aRu-XB-bHH" firstAttribute="top" secondItem="0li-2h-asG" secondAttribute="bottom" id="AYu-26-17v"/>
                                                         <constraint firstItem="TYE-cu-S0U" firstAttribute="top" secondItem="TB8-Hw-W88" secondAttribute="bottom" id="CEm-ed-1gV"/>
-                                                        <constraint firstItem="fup-Wq-fJx" firstAttribute="height" secondItem="hgL-9p-aUX" secondAttribute="height" id="NO5-Dx-otz"/>
                                                         <constraint firstItem="TB8-Hw-W88" firstAttribute="top" secondItem="OdC-uI-3L3" secondAttribute="top" id="PbC-o8-P9L"/>
-                                                        <constraint firstItem="p6u-j2-cfB" firstAttribute="width" secondItem="hgL-9p-aUX" secondAttribute="width" id="bxt-kS-CJ5"/>
-                                                        <constraint firstItem="p6u-j2-cfB" firstAttribute="top" secondItem="hgL-9p-aUX" secondAttribute="bottom" id="c3Y-eY-nth"/>
-                                                        <constraint firstItem="hgL-9p-aUX" firstAttribute="top" secondItem="PJF-I1-cfV" secondAttribute="bottom" id="gZo-6s-DZ2"/>
-                                                        <constraint firstItem="p6u-j2-cfB" firstAttribute="height" secondItem="hgL-9p-aUX" secondAttribute="height" id="llz-Pp-8a6"/>
                                                         <constraint firstItem="JX7-SP-nN1" firstAttribute="top" secondItem="TYE-cu-S0U" secondAttribute="bottom" id="mqI-i6-afJ"/>
                                                         <constraint firstItem="0li-2h-asG" firstAttribute="top" secondItem="JX7-SP-nN1" secondAttribute="bottom" id="qEf-Zk-gIZ"/>
-                                                        <constraint firstItem="fup-Wq-fJx" firstAttribute="width" secondItem="hgL-9p-aUX" secondAttribute="width" id="uu5-hV-Bfz"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -449,7 +449,7 @@
                             <tableViewSection headerTitle="Info and State" id="Bgw-yR-3ah">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="wwc-Du-3aE">
-                                        <rect key="frame" x="0.0" y="1176" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="1386" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwc-Du-3aE" id="Njm-6X-FLp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -483,7 +483,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="Bd1-3g-g07">
-                                        <rect key="frame" x="0.0" y="1226" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="1436" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bd1-3g-g07" id="1XH-y6-wnG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
@@ -519,7 +519,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="Trh-Ug-Nij">
-                                        <rect key="frame" x="0.0" y="1335" width="320" height="113"/>
+                                        <rect key="frame" x="0.0" y="1545" width="320" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Trh-Ug-Nij" id="e7C-jd-pb9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
@@ -568,6 +568,7 @@
                         <outlet property="connectionSwitch" destination="4qP-3s-tgB" id="LRu-bF-eO5"/>
                         <outlet property="firmwareUpdateLabel" destination="0WJ-XI-TGM" id="FGd-tL-q5o"/>
                         <outlet property="gyroBMI160Graph" destination="fup-Wq-fJx" id="PNg-mY-c7c"/>
+                        <outlet property="humidityGraphView" destination="p7C-0f-xTX" id="eqy-w2-FIf"/>
                         <outlet property="humidityMeasurement" destination="dIG-bm-Z44" id="lFt-Rg-5hu"/>
                         <outlet property="lightGraphView" destination="p6u-j2-cfB" id="YoT-WB-2kP"/>
                         <outlet property="lightMeasurement" destination="MuI-4W-01i" id="qrZ-hb-utT"/>

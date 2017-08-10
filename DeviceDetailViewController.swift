@@ -49,11 +49,14 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     
     // Graph Views & Data
     @IBOutlet weak var accelerometerGraphView: APLGraphView!
-    @IBOutlet weak var lightGraphView: APLGraphView!
     @IBOutlet weak var gyroBMI160Graph: APLGraphView!
+    @IBOutlet weak var lightGraphView: APLGraphView!
+    @IBOutlet weak var humidityGraphView: APLGraphView!
+    
     var accelerometerBMI160Data = [MBLAccelerometerData]()
     var gyroBMI160Data = [MBLGyroData]()
     var lightData = [Double]()
+    var humidityData = [Double]()
     
     // Events
     var hygrometerBME280Event: MBLEvent<MBLNumericData>!
@@ -428,13 +431,25 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
 
         // -----  HUMIDITY -----
         let hygrometerBME280 = device.hygrometer as! MBLHygrometerBME280
-            hygrometerBME280.humidityOversampling = .oversample1X
         
+        // set measurement parameters
+        hygrometerBME280.humidityOversampling = .oversample1X
         hygrometerBME280Event = device.hygrometer!.humidity!.periodicRead(withPeriod: 700)
+        self.humidityGraphView.fullScale = 100
+        
+        // create data storage array
+        var array_H = [Double]()
+        humidityData = array_H
+        
+        // add to streaming events
         streamingEvents.insert(hygrometerBME280Event)
         hygrometerBME280Event.startNotificationsAsync { (obj, error) in
             if let obj = obj {
                 self.humidityMeasurement.text = String(format: "%.0f%%", obj.value.doubleValue)
+            }
+            if let obj = obj {
+                self.humidityGraphView.addX(obj.value.doubleValue, y: 0.0, z: 0.0)
+                array_H.append((obj.value.doubleValue))
             }
         }
         
@@ -442,11 +457,12 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         let ambientLightLTR329 = device.ambientLight as! MBLAmbientLightLTR329
         // set measurement parameters
         ambientLightLTR329.gain = .gain1X
-        ambientLightLTR329.integrationTime = .integration100ms
-        ambientLightLTR329.measurementRate = .rate1000ms
+        ambientLightLTR329.integrationTime = .integration50ms
+        ambientLightLTR329.measurementRate = .rate50ms
+        self.lightGraphView.fullScale = 200
         // create data storage array
-        var array2 = [Double]()
-        lightData = array2
+        var array_L = [Double]()
+        lightData = array_L
         
         // add to streaming events
         streamingEvents.insert(ambientLightLTR329.periodicIlluminance)
@@ -455,33 +471,33 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
                 self.lightMeasurement.text = String(format: "%.0f lux", obj.value.doubleValue)
             }
             if let obj = obj {
-                self.lightGraphView.addX(obj.value.doubleValue, y: obj.value.doubleValue, z: obj.value.doubleValue)
+                self.lightGraphView.addX(obj.value.doubleValue, y: 0.0, z: 0.0)
+                array_L.append((obj.value.doubleValue))
             }
-            array2.append((obj?.value.doubleValue)!)
         }
         
        
         // ----- ACCELEROMETER -----
         updateAccelerometerBMI160Settings()
-        var array = [MBLAccelerometerData]() /* capacity: 1000 */
-        accelerometerBMI160Data = array
+        var array_A = [MBLAccelerometerData]() /* capacity: 1000 */
+        accelerometerBMI160Data = array_A
         streamingEvents.insert(device.accelerometer!.dataReadyEvent)
         device.accelerometer!.dataReadyEvent.startNotificationsAsync { (obj, error) in
             if let obj = obj {
                 self.accelerometerGraphView.addX(obj.x, y: obj.y, z: obj.z)
-                array.append(obj)
+                array_A.append(obj)
             }
         }
   
         // ----- GYROSCOPE -----
         updateGyroBMI160Settings()
-        var array3 = [MBLGyroData]() /* capacity: 1000 */
-        gyroBMI160Data = array3
+        var array_G = [MBLGyroData]() /* capacity: 1000 */
+        gyroBMI160Data = array_G
         streamingEvents.insert(device.gyro!.dataReadyEvent)
         device.gyro!.dataReadyEvent.startNotificationsAsync { (obj, error) in
             if let obj = obj {
                 self.gyroBMI160Graph.addX(obj.x * 0.008, y: obj.y * 0.008, z: obj.z * 0.008)
-                array3.append(obj)
+                array_G.append(obj)
             }
         }
         
