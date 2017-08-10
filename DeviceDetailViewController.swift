@@ -24,6 +24,8 @@ extension String {
 class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDelegate, DFUProgressDelegate, LoggerDelegate, DFUPeripheralSelectorDelegate {
     var device: MBLMetaWear!
     
+     // *************  INITIALIZE  *************
+    // Device info & cells
     @IBOutlet weak var connectionSwitch: UISwitch!
     @IBOutlet weak var connectionStateLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -33,74 +35,30 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     @IBOutlet var infoAndStateCells: [UITableViewCell]!
     @IBOutlet weak var firmwareUpdateLabel: UILabel!
 
-    @IBOutlet weak var ledCell: UITableViewCell!
-    var temperatureEvent: MBLEvent<MBLNumericData>!
- 
- 
-    var accelerometerBMI160Data = [MBLAccelerometerData]()
-
-    @IBOutlet weak var gpioCell: UITableViewCell!
-    @IBOutlet weak var gpioPinSelector: UISegmentedControl!
-    @IBOutlet weak var gpioPinChangeType: UISegmentedControl!
-    @IBOutlet weak var gpioStartPinChange: UIButton!
-    @IBOutlet weak var gpioStopPinChange: UIButton!
-    @IBOutlet weak var gpioPinChangeLabel: UILabel!
-    var gpioPinChangeCount = 0
-    @IBOutlet weak var gpioDigitalValue: UILabel!
-    @IBOutlet weak var gpioAnalogAbsoluteButton: UIButton!
-    @IBOutlet weak var gpioAnalogAbsoluteValue: UILabel!
-    @IBOutlet weak var gpioAnalogRatioButton: UIButton!
-    @IBOutlet weak var gpioAnalogRatioValue: UILabel!
-    
-    @IBOutlet weak var barometerBME280Cell: UITableViewCell!
-    @IBOutlet weak var barometerBME280Oversampling: UISegmentedControl!
-    @IBOutlet weak var barometerBME280Averaging: UISegmentedControl!
-    @IBOutlet weak var barometerBME280Standby: UISegmentedControl!
-    @IBOutlet weak var barometerBME280StartStream: UIButton!
-    @IBOutlet weak var barometerBME280StopStream: UIButton!
-    @IBOutlet weak var barometerBME280Altitude: UILabel!
-    
-    @IBOutlet weak var ambientLightLTR329Cell: UITableViewCell!
-    @IBOutlet weak var ambientLightLTR329Gain: UISegmentedControl!
-    @IBOutlet weak var ambientLightLTR329Integration: UISegmentedControl!
-    @IBOutlet weak var ambientLightLTR329Measurement: UISegmentedControl!
-    @IBOutlet weak var ambientLightLTR329StartStream: UIButton!
-    @IBOutlet weak var ambientLightLTR329StopStream: UIButton!
-    @IBOutlet weak var ambientLightLTR329Illuminance: UILabel!
-    
-
-    @IBOutlet weak var hygrometerBME280Cell: UITableViewCell!
-    @IBOutlet weak var hygrometerBME280Oversample: UISegmentedControl!
-    @IBOutlet weak var hygrometerBME280StartStream: UIButton!
-    @IBOutlet weak var hygrometerBME280StopStream: UIButton!
-    @IBOutlet weak var hygrometerBME280Humidity: UILabel!
-    var hygrometerBME280Event: MBLEvent<MBLNumericData>!
-    
-    @IBOutlet weak var i2cCell: UITableViewCell!
-    @IBOutlet weak var i2cSizeSelector: UISegmentedControl!
-    @IBOutlet weak var i2cDeviceAddress: UITextField!
-    @IBOutlet weak var i2cRegisterAddress: UITextField!
-    @IBOutlet weak var i2cReadByteLabel: UILabel!
-    @IBOutlet weak var i2cWriteByteField: UITextField!
-  
-
+    // Monitoring & Streaming Buttons
     @IBOutlet weak var startMonitoringButton: UIButton!
     @IBOutlet weak var stopMonitoringButton: UIButton!
     
     @IBOutlet weak var AmbientEnvironmentStartStream: UIButton!
     @IBOutlet weak var AmbientEnvironmentStopStream: UIButton!
+    
+    // Measurement Labels
     @IBOutlet weak var temperatureMeasurement: UILabel!
     @IBOutlet weak var humidityMeasurement: UILabel!
     @IBOutlet weak var lightMeasurement: UILabel!
     
+    // Graph Views & Data
     @IBOutlet weak var accelerometerGraphView: APLGraphView!
     @IBOutlet weak var lightGraphView: APLGraphView!
     @IBOutlet weak var gyroBMI160Graph: APLGraphView!
+    var accelerometerBMI160Data = [MBLAccelerometerData]()
     var gyroBMI160Data = [MBLGyroData]()
-  
     
+    // Events
+    var hygrometerBME280Event: MBLEvent<MBLNumericData>!
+    var temperatureEvent: MBLEvent<MBLNumericData>!
     
-    
+    // Controllers, etc.
     var streamingEvents: Set<NSObject> = [] // Can't use proper type due to compiler seg fault
     var isObserving = false {
         didSet {
@@ -120,6 +78,10 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     var controller: UIDocumentInteractionController!
     var initiator: DFUServiceInitiator?
     var dfuController: DFUServiceController?
+    
+    
+    
+     // *************  SETUP & GENERAL FUNCTIONS  *************
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -215,11 +177,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
             print("ID: \(device.identifier.uuidString)")
         }
         
-        if device.led != nil {
-            cell(ledCell, setHidden: false)
-        }
-        
-        // Only allow LED module if the device is in use by other app
+
         if device.programedByOtherApp {
             if UserDefaults.standard.object(forKey: "ihaveseenprogramedByOtherAppmessage") == nil {
                 UserDefaults.standard.set(1, forKey: "ihaveseenprogramedByOtherAppmessage")

@@ -206,6 +206,16 @@
                                         <action selector="connectionSwitchPressed:" destination="and-78-Gqu" eventType="valueChanged" id="jCc-Cm-iMB"/>
                                     </connections>
                                 </switch>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXU-0o-JBc" userLabel="Turn Off LED">
+                                    <rect key="frame" x="223" y="46" width="89" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Turn Off LED">
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="turnOffLEDPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="gXK-DW-oXx"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
@@ -250,13 +260,13 @@
                                                             <rect key="frame" x="0.0" y="66" width="320" height="197"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_crying" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-kK-Yds">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="197"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_normal" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-S1-UU3">
-                                                                    <rect key="frame" x="107" y="0.0" width="107" height="197"/>
+                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_sleeping" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-ta-ZTQ">
-                                                                    <rect key="frame" x="214" y="0.0" width="106" height="197"/>
+                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="197"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -273,16 +283,16 @@
                                                             <rect key="frame" x="0.0" y="263" width="320" height="220"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-6a-S9x" userLabel="Temperature Stack View">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="220"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temperature" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-Zi-9OH" userLabel="Thermometer">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="zIV-CC-ejF"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-Lf-Qk3">
-                                                                            <rect key="frame" x="0.0" y="120" width="107" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -293,7 +303,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-wY-Bfs" userLabel="Light Stack View">
-                                                                    <rect key="frame" x="107" y="0.0" width="107" height="220"/>
+                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Light" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-RW-RbL" userLabel="Lightbulb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
@@ -313,16 +323,16 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8SJ-fI-gUx" userLabel="Humidity Stack View">
-                                                                    <rect key="frame" x="214" y="0.0" width="106" height="220"/>
+                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humidity" translatesAutoresizingMaskIntoConstraints="NO" id="grA-WR-Tnc" userLabel="Raindrop">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="YB3-Mi-rX6"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIG-bm-Z44">
-                                                                            <rect key="frame" x="0.0" y="120" width="106" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -540,154 +550,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="LED" id="Km7-7G-J5I">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="Nhr-ih-E25">
-                                        <rect key="frame" x="0.0" y="1781" width="320" height="169"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nhr-ih-E25" id="3ur-B8-wZt">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKd-OL-5Z6">
-                                                    <rect key="frame" x="14" y="8" width="101" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Turn On Cyan">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="turnOnCyanLEDPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="Oht-qM-STd"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cK-fn-sUj">
-                                                    <rect key="frame" x="223" y="8" width="83" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Flash White">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="flashWhiteLEDPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="RxA-uy-dBG"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXU-0o-JBc">
-                                                    <rect key="frame" x="139" y="49" width="57" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Turn Off">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="turnOffLEDPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="gXK-DW-oXx"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Ambient Light LTR329" id="k2T-az-d2v">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="285" id="dqJ-xr-btu">
-                                        <rect key="frame" x="0.0" y="1990" width="320" height="285"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dqJ-xr-btu" id="p8h-Zx-HB6">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Rq-Wq-qRd">
-                                                    <rect key="frame" x="14" y="27" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="1X"/>
-                                                        <segment title="2X"/>
-                                                        <segment title="4X"/>
-                                                        <segment title="8X"/>
-                                                        <segment title="48X"/>
-                                                        <segment title="96X"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gain:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU6-ea-pij">
-                                                    <rect key="frame" x="14" y="8" width="34" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Integration Time (ms):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esE-qT-dOD">
-                                                    <rect key="frame" x="14" y="68" width="143" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="7HB-n1-zdG">
-                                                    <rect key="frame" x="14" y="87" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="50"/>
-                                                        <segment title="100"/>
-                                                        <segment title="150"/>
-                                                        <segment title="200"/>
-                                                        <segment title="250"/>
-                                                        <segment title="300"/>
-                                                        <segment title="350"/>
-                                                        <segment title="400"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdB-VN-dbG">
-                                                    <rect key="frame" x="14" y="197" width="108" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Start Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="ambientLightLTR329StartStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="6l0-x3-ZYZ"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIq-Y5-tdj">
-                                                    <rect key="frame" x="199" y="197" width="107" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Stop Streaming">
-                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="ambientLightLTR329StopStreamPressed:" destination="and-78-Gqu" eventType="touchUpInside" id="bsb-jQ-4Vm"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Measurement Rate (ms):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3i-EY-Jkg">
-                                                    <rect key="frame" x="14" y="128" width="159" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="4hR-fN-9ef">
-                                                    <rect key="frame" x="14" y="148" width="292" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <segments>
-                                                        <segment title="50"/>
-                                                        <segment title="100"/>
-                                                        <segment title="200"/>
-                                                        <segment title="500"/>
-                                                        <segment title="1000"/>
-                                                        <segment title="2000"/>
-                                                    </segments>
-                                                </segmentedControl>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X.XXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-cL-F6m">
-                                                    <rect key="frame" x="199" y="235" width="107" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illuminance (lux)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlR-5f-YTd">
-                                                    <rect key="frame" x="14" y="235" width="124" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="and-78-Gqu" id="bbU-lc-BcB"/>
@@ -702,19 +564,11 @@
                         <outlet property="AmbientEnvironmentStartStream" destination="66b-iu-lXC" id="PbA-W7-rmM"/>
                         <outlet property="AmbientEnvironmentStopStream" destination="Bhd-3F-ua6" id="RjB-17-bes"/>
                         <outlet property="accelerometerGraphView" destination="hgL-9p-aUX" id="Zmr-NA-EPr"/>
-                        <outlet property="ambientLightLTR329Cell" destination="dqJ-xr-btu" id="Jkr-9b-yq9"/>
-                        <outlet property="ambientLightLTR329Gain" destination="6Rq-Wq-qRd" id="dQ5-CM-S9c"/>
-                        <outlet property="ambientLightLTR329Illuminance" destination="Fhr-cL-F6m" id="mty-i1-4Qg"/>
-                        <outlet property="ambientLightLTR329Integration" destination="7HB-n1-zdG" id="YyK-tg-9DQ"/>
-                        <outlet property="ambientLightLTR329Measurement" destination="4hR-fN-9ef" id="MUR-0o-p6f"/>
-                        <outlet property="ambientLightLTR329StartStream" destination="DdB-VN-dbG" id="PTW-7z-2Af"/>
-                        <outlet property="ambientLightLTR329StopStream" destination="yIq-Y5-tdj" id="1kZ-fB-1RM"/>
                         <outlet property="connectionStateLabel" destination="CLU-aI-rU0" id="s61-NF-ulO"/>
                         <outlet property="connectionSwitch" destination="4qP-3s-tgB" id="LRu-bF-eO5"/>
                         <outlet property="firmwareUpdateLabel" destination="0WJ-XI-TGM" id="FGd-tL-q5o"/>
                         <outlet property="gyroBMI160Graph" destination="fup-Wq-fJx" id="PNg-mY-c7c"/>
                         <outlet property="humidityMeasurement" destination="dIG-bm-Z44" id="lFt-Rg-5hu"/>
-                        <outlet property="ledCell" destination="Nhr-ih-E25" id="hFa-he-xO8"/>
                         <outlet property="lightGraphView" destination="p6u-j2-cfB" id="YoT-WB-2kP"/>
                         <outlet property="lightMeasurement" destination="MuI-4W-01i" id="qrZ-hb-utT"/>
                         <outlet property="nameTextField" destination="dDV-8p-kI8" id="ssO-2o-OMZ"/>
@@ -726,10 +580,8 @@
                         <outletCollection property="infoAndStateCells" destination="Trh-Ug-Nij" collectionClass="NSMutableArray" id="Ycw-7m-kqj"/>
                         <outletCollection property="allCells" destination="wwc-Du-3aE" collectionClass="NSMutableArray" id="QZc-FT-4Gz"/>
                         <outletCollection property="allCells" destination="Trh-Ug-Nij" collectionClass="NSMutableArray" id="a8h-WF-c6l"/>
-                        <outletCollection property="allCells" destination="Nhr-ih-E25" collectionClass="NSMutableArray" id="1CE-QZ-KwX"/>
                         <outletCollection property="allCells" destination="Bd1-3g-g07" collectionClass="NSMutableArray" id="dte-vb-m5c"/>
                         <outletCollection property="infoAndStateCells" destination="Bd1-3g-g07" collectionClass="NSMutableArray" id="3XM-pM-Xp5"/>
-                        <outletCollection property="allCells" destination="dqJ-xr-btu" collectionClass="NSMutableArray" id="fw2-Ej-ne5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wq9-CB-brG" userLabel="First Responder" sceneMemberID="firstResponder"/>
