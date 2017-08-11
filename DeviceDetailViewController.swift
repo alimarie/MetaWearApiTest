@@ -13,8 +13,8 @@ import MessageUI
 import Bolts
 import MBProgressHUD
 import iOSDFULibrary
- import CoreMotion
- import simd
+// import CoreMotion
+// import simd
  
 
 extension String {
@@ -52,15 +52,19 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
     @IBOutlet weak var gyroBMI160Graph: APLGraphView!
     @IBOutlet weak var lightGraphView: APLGraphView!
     @IBOutlet weak var humidityGraphView: APLGraphView!
+    @IBOutlet weak var temperatureGraphView: APLGraphView!
     
     var accelerometerBMI160Data = [MBLAccelerometerData]()
     var gyroBMI160Data = [MBLGyroData]()
     var lightData = [Double]()
     var humidityData = [Double]()
+    var temperatureData = [Double]()
     
     // Events
-    var hygrometerBME280Event: MBLEvent<MBLNumericData>!
+    var humidityEvent: MBLEvent<MBLNumericData>!
     var temperatureEvent: MBLEvent<MBLNumericData>!
+    var lightEvent: MBLEvent<MBLNumericData>!
+    
     
     // Controllers, etc.
     var streamingEvents: Set<NSObject> = [] // Can't use proper type due to compiler seg fault
@@ -420,13 +424,24 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         device.led?.setLEDColorAsync(UIColor.cyan, withIntensity: 1.0)
         
         // -----  TEMP -----
-        let temp1 = device.temperature!.onboardThermistor
+
+        // set measurement parameters
+        self.temperatureGraphView.fullScale = 60
+        temperatureEvent = device.temperature!.onboardThermistor?.periodicRead(withPeriod: 500)
         
-        temperatureEvent = temp1?.periodicRead(withPeriod: 500)
+        // create data storage array
+        var array_T = [Double]()
+        temperatureData = array_T
+        
+        // add to streaming events
         streamingEvents.insert(temperatureEvent)
-        
-        temp1!.readAsync().success { result in
-            self.temperatureMeasurement.text = result.value.stringValue.appending("°C")
+        temperatureEvent.startNotificationsAsync { (obj, error) in
+            if let obj = obj {
+                self.temperatureMeasurement.text = obj.value.stringValue.appending("°C")            }
+            if let obj = obj {
+                self.temperatureGraphView.addX(obj.value.doubleValue, y: 0.0, z: 0.0)
+                array_T.append((obj.value.doubleValue))
+            }
         }
 
         // -----  HUMIDITY -----
@@ -434,7 +449,7 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         
         // set measurement parameters
         hygrometerBME280.humidityOversampling = .oversample1X
-        hygrometerBME280Event = device.hygrometer!.humidity!.periodicRead(withPeriod: 700)
+        humidityEvent = device.hygrometer!.humidity!.periodicRead(withPeriod: 700)
         self.humidityGraphView.fullScale = 100
         
         // create data storage array
@@ -442,8 +457,8 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         humidityData = array_H
         
         // add to streaming events
-        streamingEvents.insert(hygrometerBME280Event)
-        hygrometerBME280Event.startNotificationsAsync { (obj, error) in
+        streamingEvents.insert(humidityEvent)
+        humidityEvent.startNotificationsAsync { (obj, error) in
             if let obj = obj {
                 self.humidityMeasurement.text = String(format: "%.0f%%", obj.value.doubleValue)
             }
@@ -455,18 +470,21 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         
         // -----  LIGHT -----
         let ambientLightLTR329 = device.ambientLight as! MBLAmbientLightLTR329
+        
         // set measurement parameters
         ambientLightLTR329.gain = .gain1X
         ambientLightLTR329.integrationTime = .integration50ms
         ambientLightLTR329.measurementRate = .rate50ms
+        lightEvent = ambientLightLTR329.periodicIlluminance
         self.lightGraphView.fullScale = 200
+        
         // create data storage array
         var array_L = [Double]()
         lightData = array_L
         
         // add to streaming events
-        streamingEvents.insert(ambientLightLTR329.periodicIlluminance)
-        ambientLightLTR329.periodicIlluminance.startNotificationsAsync { (obj, error) in
+        streamingEvents.insert(lightEvent)
+        lightEvent.startNotificationsAsync { (obj, error) in
             if let obj = obj {
                 self.lightMeasurement.text = String(format: "%.0f lux", obj.value.doubleValue)
             }
@@ -475,7 +493,6 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
                 array_L.append((obj.value.doubleValue))
             }
         }
-        
        
         // ----- ACCELEROMETER -----
         updateAccelerometerBMI160Settings()
@@ -514,22 +531,21 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         device.led?.setLEDOnAsync(false, withOptions: 1)
         
         // ----- temp -----
-        
+        streamingEvents.remove(temperatureEvent)
+        temperatureEvent.stopNotificationsAsync()
         
         // ----- humidity -----
-        streamingEvents.remove(hygrometerBME280Event)
-        hygrometerBME280Event.stopNotificationsAsync()
+        streamingEvents.remove(humidityEvent)
+        humidityEvent.stopNotificationsAsync()
         
         // ----- light -----
-        let ambientLightLTR329 = device.ambientLight as! MBLAmbientLightLTR329
-        streamingEvents.remove(ambientLightLTR329.periodicIlluminance)
-        ambientLightLTR329.periodicIlluminance.stopNotificationsAsync()
+        streamingEvents.remove(lightEvent)
+        lightEvent.stopNotificationsAsync()
         
         // ----- accelerometer -----
         streamingEvents.remove(device.accelerometer!.dataReadyEvent)
         device.accelerometer!.dataReadyEvent.stopNotificationsAsync()
      
-        
         // ----- gyroscope -----
         streamingEvents.remove(device.gyro!.dataReadyEvent)
         device.gyro!.dataReadyEvent.stopNotificationsAsync()
@@ -562,6 +578,11 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         
         // ----- Track Feeding -----
      
+        
+        // ----- Track Ambient -----
+    //    temperatureEvent.startLoggingAsync()
+        humidityEvent.startLoggingAsync()
+        lightEvent.startLoggingAsync()
     }
     
     /* 
@@ -619,13 +640,6 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
                 self.connectDevice(false)
                 hud.hide(animated: true)
                 
-                
-                // email data
-            var gyroData = Data()
-            for dataElement in self.gyroBMI160Data {
-                gyroData.append("\(dataElement.timestamp.timeIntervalSince1970),\(dataElement.x),\(dataElement.y),\(dataElement.z)\n".data(using: String.Encoding.utf8)!)
-            }
-            self.send(gyroData, title: "GyroData")
         }
         
         //-----  CRYING -----
@@ -633,7 +647,27 @@ class DeviceDetailViewController: StaticDataTableViewController, DFUServiceDeleg
         //-----  FEEDING -----
         
         //-----  TEMPERATURE -----
-        
+    /*    temperatureEvent.downloadLogAndStopLoggingAsync(true) { number in
+            hud.progress = number
+            }.success { array in
+               self.temperatureData = array as! [Double]
+               for obj in self.temperatureData {
+    //                self.temperatureGraphView.addX(obj.value.doubleValue, y: 0.0, z: 0.0)
+                }
+                hud.mode = .indeterminate
+                hud.label.text = "Clearing Log..."
+                self.logCleanup { error in
+                    hud.hide(animated: true)
+                    if error != nil {
+                        self.connectDevice(false)
+                    }
+                }
+            }.failure { error in
+                self.connectDevice(false)
+                hud.hide(animated: true)
+                
+        }
+  */      
         //-----  LIGHT -----
         
         //-----  HUMIDITY -----

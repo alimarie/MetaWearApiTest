@@ -222,15 +222,15 @@
                         <sections>
                             <tableViewSection headerTitle="Ambient Environment" id="YOy-sf-gzE" userLabel="Ambient">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1200" id="CqG-hx-qLp">
-                                        <rect key="frame" x="0.0" y="147" width="320" height="1200"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="1350" id="CqG-hx-qLp">
+                                        <rect key="frame" x="0.0" y="146.5" width="320" height="1350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CqG-hx-qLp" id="1FD-JF-qdQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="1199"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="1349"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OdC-uI-3L3" userLabel="Felicity Stack View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1143"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="1293"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Hw-W88" userLabel="Start Monitoring Button">
                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="33"/>
@@ -260,13 +260,13 @@
                                                             <rect key="frame" x="0.0" y="66" width="320" height="197"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_crying" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-kK-Yds">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="197"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_normal" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-S1-UU3">
-                                                                    <rect key="frame" x="107" y="0.0" width="107" height="197"/>
+                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="197"/>
                                                                 </imageView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby_sleeping" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-ta-ZTQ">
-                                                                    <rect key="frame" x="214" y="0.0" width="106" height="197"/>
+                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="197"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -283,16 +283,16 @@
                                                             <rect key="frame" x="0.0" y="263" width="320" height="220"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-6a-S9x" userLabel="Temperature Stack View">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="220"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temperature" translatesAutoresizingMaskIntoConstraints="NO" id="ZDs-Zi-9OH" userLabel="Thermometer">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="zIV-CC-ejF"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-Lf-Qk3">
-                                                                            <rect key="frame" x="0.0" y="120" width="107" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -303,7 +303,7 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OLw-wY-Bfs" userLabel="Light Stack View">
-                                                                    <rect key="frame" x="107" y="0.0" width="107" height="220"/>
+                                                                    <rect key="frame" x="106.5" y="0.0" width="107" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Light" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-RW-RbL" userLabel="Lightbulb">
                                                                             <rect key="frame" x="0.0" y="0.0" width="107" height="120"/>
@@ -323,16 +323,16 @@
                                                                     </constraints>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8SJ-fI-gUx" userLabel="Humidity Stack View">
-                                                                    <rect key="frame" x="214" y="0.0" width="106" height="220"/>
+                                                                    <rect key="frame" x="213.5" y="0.0" width="106.5" height="220"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humidity" translatesAutoresizingMaskIntoConstraints="NO" id="grA-WR-Tnc" userLabel="Raindrop">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="120"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="YB3-Mi-rX6"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIG-bm-Z44">
-                                                                            <rect key="frame" x="0.0" y="120" width="106" height="100"/>
+                                                                            <rect key="frame" x="0.0" y="120" width="106.5" height="100"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -425,6 +425,14 @@
                                                                 <constraint firstAttribute="width" constant="320" id="aqv-lU-jR1"/>
                                                             </constraints>
                                                         </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zU-4E-gHd" customClass="APLGraphView">
+                                                            <rect key="frame" x="0.0" y="1143" width="320" height="150"/>
+                                                            <color key="backgroundColor" red="0.60267040019999996" green="0.85961777510000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="vMq-kS-XuI"/>
+                                                                <constraint firstAttribute="width" constant="320" id="zii-M3-8HK"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="PJF-I1-cfV" firstAttribute="top" secondItem="aRu-XB-bHH" secondAttribute="bottom" id="9GF-qA-Quh"/>
@@ -449,7 +457,7 @@
                             <tableViewSection headerTitle="Info and State" id="Bgw-yR-3ah">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="wwc-Du-3aE">
-                                        <rect key="frame" x="0.0" y="1386" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="1535.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwc-Du-3aE" id="Njm-6X-FLp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -483,7 +491,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="Bd1-3g-g07">
-                                        <rect key="frame" x="0.0" y="1436" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="1585.5" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bd1-3g-g07" id="1XH-y6-wnG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
@@ -519,7 +527,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="Trh-Ug-Nij">
-                                        <rect key="frame" x="0.0" y="1545" width="320" height="113"/>
+                                        <rect key="frame" x="0.0" y="1694.5" width="320" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Trh-Ug-Nij" id="e7C-jd-pb9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
@@ -576,6 +584,7 @@
                         <outlet property="setNameButton" destination="mCO-hn-9bg" id="Ms4-63-AEa"/>
                         <outlet property="startMonitoringButton" destination="TB8-Hw-W88" id="g3r-ej-C0b"/>
                         <outlet property="stopMonitoringButton" destination="TYE-cu-S0U" id="TE9-mx-l1Y"/>
+                        <outlet property="temperatureGraphView" destination="4zU-4E-gHd" id="c4t-9f-9uk"/>
                         <outlet property="temperatureMeasurement" destination="cWu-Lf-Qk3" id="EZk-yI-huY"/>
                         <outletCollection property="infoAndStateCells" destination="wwc-Du-3aE" collectionClass="NSMutableArray" id="Nc9-EM-0cX"/>
                         <outletCollection property="infoAndStateCells" destination="Trh-Ug-Nij" collectionClass="NSMutableArray" id="Ycw-7m-kqj"/>
